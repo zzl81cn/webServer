@@ -1,0 +1,9 @@
+@echo off 
+echo starting php-cgi... 
+D:\webServer\php55\RunHiddenConsole.exe php-cgi.exe -b 127.0.0.1:9000 -c D:\webServer\php55\php.ini
+echo starting nginx... 
+cd D:\webServer\nginx-1.11.1
+RunHiddenConsole.exe nginx
+:: echo starting mysql... 
+:: "D:\Program Files\MySQL\MySQL Server 5.5\bin\mysqld" 
+exit 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>V2.1版本商品资料上传</title>
+<meta name="description" content="小珠快跑">
+<meta name="keywords" content="小珠快跑,珠宝拍卖,二手珠宝">
+<style>
+	.outer-wrapper {
+		padding-top: 20px;
+		text-align: center;
+	}
+	.ohhdear-iframe {
+		margin: 0 auto;
+		width: 100%;
+		min-height: 2950px;
+	}
+	@media (min-width: 768px) and (max-width: 991px) {
+		.ohhdear-iframe {
+			width: 750px;
+			min-height: 3200px;
+		}
+	}
+	@media (min-width: 992px) and (max-width: 1199px) {
+		.ohhdear-iframe {
+			width: 970px;
+			min-height: 3200px;
+		}
+	}
+	@media (min-width: 1200px) {
+		.ohhdear-iframe {
+			width: 1210px;
+			min-height: 3200px;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="outer-wrapper">
+		<iframe class="ohhdear-iframe" src="http://wj.qq.com/s/592659/8da1" frameborder="0" allowfullscreen marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<script src="jquery.js"></script>
+	<script>
+		$(function(){
+			$(".ohhdear-iframe").load(function(){
+				console.log("iframe is load!");
+				$(this).contents().find(".survey_control survey_submit").live('click', function(){
+					console.log('ha');
+				});
+/*				$(window.frames["ohhdear-iframe"].document).find(".survey_control survey_submit").live("click", function() { 
+	        alert("Hello,乐猪网:www.lezhu99.com"); 
+		    }); */
+/*				var $iframe = $(this), 
+						$contents = $iframe.contents();*/
+/*				$(".survey_control survey_submit").click(function(){
+					$("html,body").animate({
+						scrollTop: 0
+					}, 500);
+					// return false;
+					console.log("ok!");
+				});*/
+			})
+		})
+	</script>
+</body>
+</html>
